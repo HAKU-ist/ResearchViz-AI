@@ -1,0 +1,4 @@
+interface:
+  display_name: "规划实验可视化"
+  short_description: "将实验分析请求转换为经过字段校验的结构化图表规划方案"
+  default_prompt: "使用 $plan-visualization 为这个实验分析请求生成结构化图表方案。"

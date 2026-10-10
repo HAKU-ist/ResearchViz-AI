@@ -1,0 +1,4 @@
+interface:
+  display_name: "理解机器学习实验"
+  short_description: "分析机器学习实验 CSV 并生成结构化数据画像与实验 Schema"
+  default_prompt: "使用 $understand-experiment 分析这个实验 CSV，并返回经过校验的实验 Schema。"

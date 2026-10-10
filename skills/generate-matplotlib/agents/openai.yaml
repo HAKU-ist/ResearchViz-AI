@@ -1,0 +1,4 @@
+interface:
+  display_name: "生成 Matplotlib 图表"
+  short_description: "根据图表规划生成可复现的 Matplotlib 代码和图片文件"
+  default_prompt: "使用 $generate-matplotlib 根据这个 Visualization Spec 生成可复现图表。"

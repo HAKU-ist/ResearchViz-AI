@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "chart_type": "bar",
+  "x": "method",
+  "y": "value",
+  "group": null,
+  "group_values": [],
+  "series_columns": [
+    "Random",
+    "Entropy",
+    "CoreSet",
+    "BADGE",
+    "EMA-v2 CE",
+    "EMA-v4 kNN CE"
+  ],
+  "series_name": "method",
+  "row_selection": {
+    "mode": "last",
+    "order_by": "round",
+    "group_by": []
+  },
+  "aggregation": {
+    "group_by": [],
+    "y_function": "none",
+    "error": "none"
+  },
+  "title": "Comparison of Final Round Accuracy Across All Methods",
+  "x_label": "Method",
+  "y_label": "Accuracy",
+  "dpi": 200,
+  "rationale": "The user requested a comparison of accuracy for all methods at the last round. A bar chart is selected to clearly compare categorical method performance on a single metric value. The data is filtered to the last observation based on the 'round' column.",
+  "assumptions": [
+    "Selected 'last' row selection mode ordered by 'round' to isolate the final experimental round for each method series.",
+    "Wide-format table melted into long-format using series_columns as categories and 'value' as the metric.",
+    "No aggregation or error bars applied as there are no repeated seeds/observations per method in the selected row."
+  ]
+}

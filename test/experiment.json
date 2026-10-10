@@ -1,0 +1,741 @@
+{
+  "meta": {
+    "skill": "understand-experiment",
+    "version": "1.0",
+    "source": "testdata/cifar10.csv",
+    "provider": "qwen",
+    "model": "qwen3.7-plus"
+  },
+  "data_schema": {
+    "schema_version": "1.0",
+    "row_count": 8,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "dataset",
+        "physical_type": "object",
+        "semantic_type": "categorical",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "cifar10"
+        ],
+        "statistics": null
+      },
+      {
+        "name": "setting",
+        "physical_type": "object",
+        "semantic_type": "categorical",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified"
+        ],
+        "statistics": null
+      },
+      {
+        "name": "round",
+        "physical_type": "int64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "statistics": {
+          "min": 0.0,
+          "max": 7.0,
+          "mean": 3.5,
+          "median": 3.5
+        }
+      },
+      {
+        "name": "n_labeled",
+        "physical_type": "int64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          2500,
+          5000,
+          7500,
+          10000,
+          12500,
+          15000,
+          17500,
+          20000
+        ],
+        "statistics": {
+          "min": 2500.0,
+          "max": 20000.0,
+          "mean": 11250.0,
+          "median": 11250.0
+        }
+      },
+      {
+        "name": "Random",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.583,
+          0.6493,
+          0.6989,
+          0.717,
+          0.7376,
+          0.7533,
+          0.7649,
+          0.7727
+        ],
+        "statistics": {
+          "min": 0.583,
+          "max": 0.7727,
+          "mean": 0.7095875,
+          "median": 0.7273000000000001
+        }
+      },
+      {
+        "name": "Entropy",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5753,
+          0.6553,
+          0.6898,
+          0.706,
+          0.742,
+          0.7571,
+          0.7711,
+          0.7863
+        ],
+        "statistics": {
+          "min": 0.5753,
+          "max": 0.7863,
+          "mean": 0.7103625,
+          "median": 0.724
+        }
+      },
+      {
+        "name": "CoreSet",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5801,
+          0.6408,
+          0.69,
+          0.7111,
+          0.7321,
+          0.7531,
+          0.7663,
+          0.7852
+        ],
+        "statistics": {
+          "min": 0.5801,
+          "max": 0.7852,
+          "mean": 0.7073375,
+          "median": 0.7216
+        }
+      },
+      {
+        "name": "BADGE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5774,
+          0.6622,
+          0.7029,
+          0.7182,
+          0.754,
+          0.7618,
+          0.7774,
+          0.782
+        ],
+        "statistics": {
+          "min": 0.5774,
+          "max": 0.782,
+          "mean": 0.7169875000000001,
+          "median": 0.7361
+        }
+      },
+      {
+        "name": "EMA-v2 CE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5802,
+          0.6628,
+          0.7014,
+          0.7205,
+          0.7472,
+          0.7677,
+          0.7714,
+          0.794
+        ],
+        "statistics": {
+          "min": 0.5802,
+          "max": 0.794,
+          "mean": 0.71815,
+          "median": 0.73385
+        }
+      },
+      {
+        "name": "EMA-v4 kNN CE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5712,
+          0.6619,
+          0.7045,
+          0.7256,
+          0.7556,
+          0.7675,
+          0.779,
+          0.7872
+        ],
+        "statistics": {
+          "min": 0.5712,
+          "max": 0.7872,
+          "mean": 0.7190624999999999,
+          "median": 0.7406
+        }
+      }
+    ],
+    "warnings": []
+  },
+  "table_sample": {
+    "schema_version": "1.0",
+    "columns": [
+      "dataset",
+      "setting",
+      "round",
+      "n_labeled",
+      "Random",
+      "Entropy",
+      "CoreSet",
+      "BADGE",
+      "EMA-v2 CE",
+      "EMA-v4 kNN CE"
+    ],
+    "rows": [
+      {
+        "row_index": 0,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 0,
+          "n_labeled": 2500,
+          "Random": 0.583,
+          "Entropy": 0.5753,
+          "CoreSet": 0.5801,
+          "BADGE": 0.5774,
+          "EMA-v2 CE": 0.5802,
+          "EMA-v4 kNN CE": 0.5712
+        }
+      },
+      {
+        "row_index": 1,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 1,
+          "n_labeled": 5000,
+          "Random": 0.6493,
+          "Entropy": 0.6553,
+          "CoreSet": 0.6408,
+          "BADGE": 0.6622,
+          "EMA-v2 CE": 0.6628,
+          "EMA-v4 kNN CE": 0.6619
+        }
+      },
+      {
+        "row_index": 2,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 2,
+          "n_labeled": 7500,
+          "Random": 0.6989,
+          "Entropy": 0.6898,
+          "CoreSet": 0.69,
+          "BADGE": 0.7029,
+          "EMA-v2 CE": 0.7014,
+          "EMA-v4 kNN CE": 0.7045
+        }
+      },
+      {
+        "row_index": 3,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 3,
+          "n_labeled": 10000,
+          "Random": 0.717,
+          "Entropy": 0.706,
+          "CoreSet": 0.7111,
+          "BADGE": 0.7182,
+          "EMA-v2 CE": 0.7205,
+          "EMA-v4 kNN CE": 0.7256
+        }
+      },
+      {
+        "row_index": 4,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 4,
+          "n_labeled": 12500,
+          "Random": 0.7376,
+          "Entropy": 0.742,
+          "CoreSet": 0.7321,
+          "BADGE": 0.754,
+          "EMA-v2 CE": 0.7472,
+          "EMA-v4 kNN CE": 0.7556
+        }
+      },
+      {
+        "row_index": 5,
+        "values": {
+          "dataset": "cifar10",
+          "setting": "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified",
+          "round": 5,
+          "n_labeled": 15000,
+          "Random": 0.7533,
+          "Entropy": 0.7571,
+          "CoreSet": 0.7531,
+          "BADGE": 0.7618,
+          "EMA-v2 CE": 0.7677,
+          "EMA-v4 kNN CE": 0.7675
+        }
+      }
+    ],
+    "strategy": "head_plus_spread"
+  },
+  "experiment_schema": {
+    "schema_version": "1.0",
+    "experiment_type": "active_learning",
+    "datasets": [
+      "CIFAR10"
+    ],
+    "methods": {
+      "column": null,
+      "values": [
+        "Random",
+        "Entropy",
+        "CoreSet",
+        "BADGE",
+        "EMA-v2 CE",
+        "EMA-v4 kNN CE"
+      ],
+      "confidence": 0.95
+    },
+    "metrics": [
+      {
+        "name": "accuracy",
+        "column": "Random",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "Entropy",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "CoreSet",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "BADGE",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "EMA-v2 CE",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "EMA-v4 kNN CE",
+        "direction": "maximize",
+        "confidence": 0.9
+      }
+    ],
+    "variables": [
+      {
+        "name": "n_labeled",
+        "column": "n_labeled",
+        "role": "independent",
+        "ordered": true,
+        "confidence": 0.95
+      },
+      {
+        "name": "round",
+        "column": "round",
+        "role": "independent",
+        "ordered": true,
+        "confidence": 0.85
+      }
+    ],
+    "repeat_column": null,
+    "warnings": [
+      "Wide-format detected: methods are represented as separate columns. Each method column is listed as a metric for plotting purposes.",
+      "No explicit repeat/seed column found; each row appears to be a single observation per budget level."
+    ]
+  },
+  "profile": {
+    "schema_version": "1.0",
+    "row_count": 8,
+    "column_count": 10,
+    "columns": [
+      {
+        "name": "dataset",
+        "physical_type": "object",
+        "semantic_type": "categorical",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "cifar10"
+        ],
+        "statistics": null
+      },
+      {
+        "name": "setting",
+        "physical_type": "object",
+        "semantic_type": "categorical",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 1,
+        "sample_values": [
+          "scratch_resnet18_seed42_b2500_q2500_epochs200_stratified"
+        ],
+        "statistics": null
+      },
+      {
+        "name": "round",
+        "physical_type": "int64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "statistics": {
+          "min": 0.0,
+          "max": 7.0,
+          "mean": 3.5,
+          "median": 3.5
+        }
+      },
+      {
+        "name": "n_labeled",
+        "physical_type": "int64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          2500,
+          5000,
+          7500,
+          10000,
+          12500,
+          15000,
+          17500,
+          20000
+        ],
+        "statistics": {
+          "min": 2500.0,
+          "max": 20000.0,
+          "mean": 11250.0,
+          "median": 11250.0
+        }
+      },
+      {
+        "name": "Random",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.583,
+          0.6493,
+          0.6989,
+          0.717,
+          0.7376,
+          0.7533,
+          0.7649,
+          0.7727
+        ],
+        "statistics": {
+          "min": 0.583,
+          "max": 0.7727,
+          "mean": 0.7095875,
+          "median": 0.7273000000000001
+        }
+      },
+      {
+        "name": "Entropy",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5753,
+          0.6553,
+          0.6898,
+          0.706,
+          0.742,
+          0.7571,
+          0.7711,
+          0.7863
+        ],
+        "statistics": {
+          "min": 0.5753,
+          "max": 0.7863,
+          "mean": 0.7103625,
+          "median": 0.724
+        }
+      },
+      {
+        "name": "CoreSet",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5801,
+          0.6408,
+          0.69,
+          0.7111,
+          0.7321,
+          0.7531,
+          0.7663,
+          0.7852
+        ],
+        "statistics": {
+          "min": 0.5801,
+          "max": 0.7852,
+          "mean": 0.7073375,
+          "median": 0.7216
+        }
+      },
+      {
+        "name": "BADGE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5774,
+          0.6622,
+          0.7029,
+          0.7182,
+          0.754,
+          0.7618,
+          0.7774,
+          0.782
+        ],
+        "statistics": {
+          "min": 0.5774,
+          "max": 0.782,
+          "mean": 0.7169875000000001,
+          "median": 0.7361
+        }
+      },
+      {
+        "name": "EMA-v2 CE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5802,
+          0.6628,
+          0.7014,
+          0.7205,
+          0.7472,
+          0.7677,
+          0.7714,
+          0.794
+        ],
+        "statistics": {
+          "min": 0.5802,
+          "max": 0.794,
+          "mean": 0.71815,
+          "median": 0.73385
+        }
+      },
+      {
+        "name": "EMA-v4 kNN CE",
+        "physical_type": "float64",
+        "semantic_type": "numeric",
+        "nullable": false,
+        "null_count": 0,
+        "null_ratio": 0.0,
+        "unique_count": 8,
+        "sample_values": [
+          0.5712,
+          0.6619,
+          0.7045,
+          0.7256,
+          0.7556,
+          0.7675,
+          0.779,
+          0.7872
+        ],
+        "statistics": {
+          "min": 0.5712,
+          "max": 0.7872,
+          "mean": 0.7190624999999999,
+          "median": 0.7406
+        }
+      }
+    ],
+    "warnings": []
+  },
+  "schema": {
+    "schema_version": "1.0",
+    "experiment_type": "active_learning",
+    "datasets": [
+      "CIFAR10"
+    ],
+    "methods": {
+      "column": null,
+      "values": [
+        "Random",
+        "Entropy",
+        "CoreSet",
+        "BADGE",
+        "EMA-v2 CE",
+        "EMA-v4 kNN CE"
+      ],
+      "confidence": 0.95
+    },
+    "metrics": [
+      {
+        "name": "accuracy",
+        "column": "Random",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "Entropy",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "CoreSet",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "BADGE",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "EMA-v2 CE",
+        "direction": "maximize",
+        "confidence": 0.9
+      },
+      {
+        "name": "accuracy",
+        "column": "EMA-v4 kNN CE",
+        "direction": "maximize",
+        "confidence": 0.9
+      }
+    ],
+    "variables": [
+      {
+        "name": "n_labeled",
+        "column": "n_labeled",
+        "role": "independent",
+        "ordered": true,
+        "confidence": 0.95
+      },
+      {
+        "name": "round",
+        "column": "round",
+        "role": "independent",
+        "ordered": true,
+        "confidence": 0.85
+      }
+    ],
+    "repeat_column": null,
+    "warnings": [
+      "Wide-format detected: methods are represented as separate columns. Each method column is listed as a metric for plotting purposes.",
+      "No explicit repeat/seed column found; each row appears to be a single observation per budget level."
+    ]
+  }
+}
